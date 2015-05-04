@@ -12,11 +12,13 @@ gf_version: 4.1.144
 # http://payara.co.s3-website-eu-west-1.amazonaws.com/payara.zip
 # for Payara STABLE, use
 # https://s3-eu-west-1.amazonaws.com/payara.co/Payara+Downloads/payara.zip
-gf_download_url: http://payara.co.s3-website-eu-west-1.amazonaws.com/payara.zip
+#gf_download_url: http://payara.co.s3-website-eu-west-1.amazonaws.com/payara.zip
+gf_download_url: http://dlc.sun.com.edgesuite.net/glassfish/4.1/release/glassfish-4.1.zip
 
 # this is the name of the first directory inside the zip
 # either glassfish or payara41, depending on the distribution
-main_dir_name: payara41
+#main_dir_name: payara41
+main_dir_name: glassfish
 
 # where to unpack the glassfish zip
 install_dir: /opt/
@@ -27,17 +29,18 @@ download_dir: /tmp
 # location where is the glassfish_{{ gf_version }}.tar.gz located
 download_prefix: ansible-glassfish
 
-appserver_account: appserver01
+#appserver_account: appserver01
+appserver_account: glassfish
 
 
 # list of extra libs to be included in the instalation
 # e.g. postgres jdbc driver, mysql driver, eclipselink noSQL, etc.
 glassfish_extra_libs:
   - name: MySQL JDBC Driver
-    file: mysql-connector-java-5.1.34.jar
-    src: http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar
-    dest: lib/mysql-connector-java-5.1.34.jar
-    state: disabled
+    file: mysql-connector-java-5.1.35.jar
+    src: http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.35/mysql-connector-java-5.1.35.jar
+    dest: lib/mysql-connector-java-5.1.35.jar
+    state: enabled
   - name: Postgres JDBC Driver
     src: http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar
     file: postgresql-9.3-1102.jdbc41.jar
