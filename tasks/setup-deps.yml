@@ -2,6 +2,7 @@
   yum: name=java-1.8.0-openjdk-devel state=present
 
 - name: Set correct Java version
-  alternatives: name=java path=/usr/lib/jvm/jre-1.8.0-openjdk/bin/java
+  alternatives: name=java path=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-28.b13.el6_6.x86_64/jre/bin/java
+  #alternatives: name=java path=/usr/lib/jvm/jre-1.8.0-openjdk/bin/java
 
 
