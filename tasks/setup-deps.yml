@@ -1,2 +1,7 @@
 - name: Install JDK
   yum: name=java-1.8.0-openjdk-devel state=present
+
+- name: Set correct Java version
+  alternatives: name=java path=/usr/lib/jvm/jre-1.8.0-openjdk/bin/java
+
+
