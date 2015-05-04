@@ -11,14 +11,14 @@
 ### END INIT INFO
 # customize values for your needs
 NAME=glassfish
-GLASSFISH_USER=appserver01
-GLASSFISH_DIR="/opt/payara41"
+GLASSFISH_USER="{{ appserver_account }}"
+GLASSFISH_DIR="/opt/{{ main_dir_name }}"
 ASADMIN="$GLASSFISH_DIR/glassfish/bin/asadmin"
 GF_DOMAIN=$2
 
 if [ -z "$GF_DOMAIN" ]
   then
-    GF_DOMAIN="domain1"
+    GF_DOMAIN="{{ gf_domain }}"
 fi
 
 case "$1" in

@@ -48,7 +48,7 @@
     - install
 
 - name: "copy configuration"
-  action: template src={{ glassfish_templates_dir }}/config/domain.xml dest={{ install_dir }}/{{ main_dir_name }}/glassfish/domains/domain1/config/domain.xml owner={{ appserver_account }} group={{ appserver_account }} mode=0640
+  action: template src={{ glassfish_templates_dir }}/config/domain.xml dest={{ install_dir }}/{{ main_dir_name }}/glassfish/domains/{{ gf_domain }}/config/domain.xml owner={{ appserver_account }} group={{ appserver_account }} mode=0640
   tags: 
     - glassfish
     - config

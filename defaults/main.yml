@@ -4,6 +4,8 @@
 # glassfish version from the {{ glassfish_list }} keys
 gf_version: 4.1.144
 
+gf_domain: domain1
+
 # let this point to the official GF distribution from oracle
 # or to the commercially supported PAYARA.co.uk download link
 # for Oracle's Glassfish, use
