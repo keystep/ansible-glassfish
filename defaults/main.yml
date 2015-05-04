@@ -18,7 +18,8 @@ gf_download_url: http://dlc.sun.com.edgesuite.net/glassfish/4.1/release/glassfis
 # this is the name of the first directory inside the zip
 # either glassfish or payara41, depending on the distribution
 #main_dir_name: payara41
-main_dir_name: glassfish
+# or: glassfish4
+main_dir_name: glassfish4
 
 # where to unpack the glassfish zip
 install_dir: /opt/
