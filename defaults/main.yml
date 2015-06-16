@@ -38,7 +38,7 @@ download_prefix: ansible-glassfish
 appserver_account: glassfish
 
 glassfish_config_files:
-    - { name: "config/domain.xml", owner: "{{ appserver_account }}", group: "{{ appserver_account }}", mode: "0640", state: "enabled" }
+    - { name: "config/domain.xml", owner: "{{ appserver_account }}", group: "{{ appserver_account }}", mode: "0640", state: "disabled" }
     - { name: "config/jmxremote.access", owner: "{{ appserver_account }}", group: "{{ appserver_account }}", mode: "0640", state: "disabled" }
     - { name: "config/jmxremote.password", owner: "{{ appserver_account }}", group: "{{ appserver_account }}", mode: "0600",  state: "disabled" }
 
@@ -65,6 +65,11 @@ glassfish_extra_libs:
     src: http://central.maven.org/maven2/org/eclipse/persistence/org.eclipse.persistence.nosql/2.5.2/org.eclipse.persistence.nosql-2.5.2.jar
     file: org.eclipse.persistence.nosql-2.5.2.jar
     dest: modules/org.eclipse.persistence.nosql-2.5.2.jar
+    state: disabled
+  - name: Jolokia
+  src: http://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-war/1.3.1/jolokia-war-1.3.1.war
+    file: jolokia-war-1.3.1.war
+    dest: domains/{{ gf_domain }}/autodeploy/jolokia.war
     state: disabled
 
 # default directory for configuration files / scripts / templates
