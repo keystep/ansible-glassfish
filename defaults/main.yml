@@ -70,7 +70,7 @@ glassfish_extra_libs:
     src: http://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-war/1.3.1/jolokia-war-1.3.1.war
     file: jolokia-war-1.3.1.war
     dest: domains/{{ gf_domain }}/autodeploy/jolokia.war
-    state: disabled
+    state: enabled
 
 # default directory for configuration files / scripts / templates
 glassfish_templates_dir: .
