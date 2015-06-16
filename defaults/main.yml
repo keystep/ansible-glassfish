@@ -67,7 +67,7 @@ glassfish_extra_libs:
     dest: modules/org.eclipse.persistence.nosql-2.5.2.jar
     state: disabled
   - name: Jolokia
-  src: http://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-war/1.3.1/jolokia-war-1.3.1.war
+    src: http://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-war/1.3.1/jolokia-war-1.3.1.war
     file: jolokia-war-1.3.1.war
     dest: domains/{{ gf_domain }}/autodeploy/jolokia.war
     state: disabled
