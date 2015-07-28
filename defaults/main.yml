@@ -17,7 +17,7 @@ gf_domain: domain1
 #gf_download_url: http://payara.co.s3-website-eu-west-1.amazonaws.com/payara.zip
 # http://bit.ly/1bGAaLi
 # direct link: https://s3-eu-west-1.amazonaws.com/payara.co/Payara+Downloads/payara-4.1.152.zip
-gf_download_url: http://dlc.sun.com.edgesuite.net/glassfish/4.1/release/glassfish-4.1.zip
+gf_download_url: http://download.java.net/glassfish/4.1/release/glassfish-4.1.zip
 
 # this is the name of the first directory inside the zip
 # either glassfish or payara41, depending on the distribution
